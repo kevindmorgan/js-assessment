@@ -11,6 +11,22 @@ define(function() {
       //
       // otherwise the function should return the number, or false if no number
       // was provided
+      if (num !== undefined) {
+        var str = '';
+        if (num % 3 === 0) {
+          str += 'fizz';
+        }
+        if (num % 5 === 0) {
+          str += 'buzz';
+        }
+        if (str) {
+          return str;
+        } else {
+          return num;
+        }
+      } else {
+        return false;
+      }
     }
   };
 });
